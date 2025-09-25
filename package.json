@@ -1,0 +1,27 @@
+{
+  "name": "number-system-converter",
+  "version": "1.0.0",
+  "description": "A simple application for automating the conversion between different number systems.",
+  "main": "src/app.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/number-system-converter.git"
+  },
+  "keywords": [
+    "number",
+    "conversion",
+    "binary",
+    "decimal",
+    "hexadecimal"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
