@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number System Converter</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        input, select, button { margin: 5px; padding: 5px; }
+        .result { margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>Number System Converter</h2>
+    <label>Enter Number:</label>
+    <input type="text" id="inputNumber" />
+    <label>From:</label>
+    <select id="fromBase">
+        <option value="2">Binary</option>
+        <option value="8">Octal</option>
+        <option value="10" selected>Decimal</option>
+        <option value="16">Hexadecimal</option>
+    </select>
+    <label>To:</label>
+    <select id="toBase">
+        <option value="2">Binary</option>
+        <option value="8">Octal</option>
+        <option value="10">Decimal</option>
+        <option value="16">Hexadecimal</option>
+    </select>
+    <button onclick="convertNumber()">Convert</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        function convertNumber() {
+            const input = document.getElementById('inputNumber').value.trim();
+            const fromBase = parseInt(document.getElementById('fromBase').value);
+            const toBase = parseInt(document.getElementById('toBase').value);
+            let result = '';
+            try {
+                if (input === '') throw 'Please enter a number.';
+                const decimal = parseInt(input, fromBase);
+                if (isNaN(decimal)) throw 'Invalid input for the selected base.';
+                result = decimal.toString(toBase).toUpperCase();
+                document.getElementById('result').textContent = `Result: ${result}`;
+            } catch (err) {
+                document.getElementById('result').textContent = `Error: ${err}`;
+            }
+        }
+    </script>
+</body>
+</html>
