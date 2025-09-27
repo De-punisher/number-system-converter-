@@ -26,6 +26,12 @@ npm start
 
 You can also use the methods provided in the `NumberSystemConverter` class for specific conversions.
 
+## 🚀 Open the App
+
+<a href="https://de-punisher.github.io/number-system-converter-/" target="_blank">
+  <button>Open Number System Converter App</button>
+</a>
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bug fixes.
